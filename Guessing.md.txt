@@ -1,0 +1,19 @@
+'''mermaid
+flowchart TD
+     Start([Start]) --> End9[End])
+A[Start] --> B[Generate Random Number witin Range]
+B --> C{Prompt User for Guess}
+C --> D{Is Guess Numeric?}
+D -->|No| C
+D -->|Yes| E{Is Guess in Range?}
+E -->|No| C
+E -->|Yes| F{Compare Guess with Random Number}
+F -->|Guess > Number| G[Feedback: Too High]
+G --> C
+F -->|Guess < Number| H[Feedback: Too Low]
+H --> C
+F -->|Guess == Number| I[Feedback: Too Low]
+H --> C
+F -->|Guess == Number| I[Feedback: Correct]
+I --> J[End Game]
+J -- K[End]
